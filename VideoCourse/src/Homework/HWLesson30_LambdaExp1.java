@@ -44,7 +44,6 @@ class TestEmployee {
     
     public static void main(String[] args) {
         TestEmployee test = new TestEmployee ();
-        
         test.alEmployees.add(new Employee("Johnson", "Johnson", 200.0));
         test.alEmployees.add(new Employee("Petersen", "Johnson", 450.0));
         test.alEmployees.add(new Employee("Nilsen", "Johnson", 350.0));

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Test2_Students_LambdaExps {
     
     public static void main(String[] args) {
+
         ArrayList <Student30> list = new ArrayList<>();
         Student30 st1 = new Student30("Ivan", 'm', 22, 3, 8.3);
         Student30 st2 = new Student30("Nikolay", 'm', 28, 2, 6.4);
@@ -32,7 +33,7 @@ public class Test2_Students_LambdaExps {
         si.testStudent30s(list, (Student30 st) -> {return st.sex == 'm';} );
         System.out.println("----------------------------------------");
         si.testStudent30s(list, (Student30 st) -> {
-                                    return (st.avGrade > 7.2 
+                                    return (st.avGrade > 7.2
                                             && st.age < 23 
                                             && st.sex == 'f');
                                 } );
