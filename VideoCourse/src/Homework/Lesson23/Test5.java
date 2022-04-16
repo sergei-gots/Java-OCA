@@ -2,18 +2,18 @@
 package Homework.Lesson23;
 
  
-class X{
+class X1{
     String s1 = "privet";
 }
 
-class Y extends X{
+class Y2 extends X1{
     boolean bool = false;
 }
 
 public class Test5 {
     
     public static void main(String[] args) {
-        X x = new Y();
+        X1 x = new Y2();
         //System.out.println(x.s1 + " " + x.bool);
     }
     
@@ -21,5 +21,5 @@ public class Test5 {
 
 
 //ANSWER:           COMPILE TIME ERROR .bool is not a field of class X.
-//CORRECT ANSWER:   CANNOT FIND SYMBOL.Symbol: variable bool
+//CORRECT ANSWER:   CANNOT FIND SY2MBOL.Symbol: variable bool
 //SCORE:            1/5

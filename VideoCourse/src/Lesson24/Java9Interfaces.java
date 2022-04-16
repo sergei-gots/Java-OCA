@@ -7,7 +7,7 @@ public class Java9Interfaces {
 }
 
 /* PRIVATE Access Modifiers */
-interface I1{
+interface I1_24{
     private static void method1(){
         System.out.println("Static method.");
     }

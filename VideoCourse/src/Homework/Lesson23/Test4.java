@@ -3,17 +3,18 @@ package Homework.Lesson23;
 
  
 class X{}
-class Y extends X{}
+
+class Y1 extends X{}
 
 public class Test4 {
-    public static void abc(X x, Y y) {
+    public static void abc(X x, Y1 y) {
         System.out.println("privet");
     }
-    public static void abc(Y y, X x) {
+    public static void abc(Y1 y, X x) {
         System.out.println("poka");
     }
     public static void main(String[] args) {
-        Y a = new Y();
+        Y1 a = new Y1();
        //  abc(a,a);
     }
     

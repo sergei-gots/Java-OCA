@@ -57,7 +57,7 @@ public class Lesson19 {
         String [] sArray4 = { "One", "Two", "Three", "Three", "It's me"};
         
         System.out.println("TEST CODE:");
-        print(abc(null));
+        //print(abc(null));
         print(abc(sArray1));
         print(abc(null, sArray1));
         print(abc(sArray2));

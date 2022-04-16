@@ -1,8 +1,8 @@
  
 package Lesson26;
 
-import java.util.ArrayList''
- 
+import java.util.ArrayList;
+
 public class TestEqualsAndToString {
     public static void main(String[] args) {
         Car c1 = new Car("red", "V4");

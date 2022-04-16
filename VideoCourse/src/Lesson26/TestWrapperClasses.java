@@ -15,7 +15,7 @@ public class TestWrapperClasses {
         //Long l1 = 50; //doesn't work in such way: to Long can be converted
                       //only long, but not int.
                       
-        Number b = new Integer(10); //UNBOXING here
+        Number b = 10; //new Integer (10); //UNBOXING here
         int c = (Integer)b; //UNBOXING here
         int c1 = (int)b;    //UNBOXING here
         switch((Integer)b){ //in switch could be used  byte, short, char, int
@@ -44,7 +44,7 @@ public class TestWrapperClasses {
         System.out.println("d2 = " + d2);
         
         //Byte b10 = new Byte(5); //NOT ALLOWED here is int as arg
-        Byte b10 = new Byte((byte)5);
+        Byte b10 = 5; //new Byte((byte)5);
         Byte b11 = Byte.valueOf((byte)5);
         
         

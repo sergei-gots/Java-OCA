@@ -46,10 +46,14 @@ class  Square extends Figure{
 }
 
 class Rectangle extends Figure{
+    
     int nSides = 4;
     int side1 = 10;
     int side2 = 8;
     
+    public Rectangle(){
+        super(4);
+    }
     
     public void perimeter(){
         System.out.println("Perimeter of the rectangle =" + 2*(side1+side2));
@@ -64,10 +68,14 @@ class XXXX extends Square {}
 
 
 class Circle extends Figure {
+    
     int nSides = 0;
     int radius = 3;
     
     
+    public Circle(){
+        super(0);
+    }
     
     public void perimeter(){
         System.out.println("Perimeter of the circle =" + 2*3.14*radius);
@@ -80,6 +88,11 @@ class Circle extends Figure {
 
 abstract class Quadrilateral extends Figure{
     int nSides = 4;
+    
+    public Quadrilateral(){
+        super(0);
+    }
+    
     void def(){
         System.out.println("This is a quadrilateral");
     }

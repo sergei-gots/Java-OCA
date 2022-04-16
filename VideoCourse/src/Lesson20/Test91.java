@@ -2,7 +2,7 @@ package Lesson20;
 
 import java.util.ArrayList;
 
-class Student {
+class Student20 {
     String name = "Test";
     int grade = 5;
 }
@@ -24,9 +24,9 @@ public class Test91 {
         //ArrayList.TOSTRING-Method
         System.out.println("list.toString:" + list.toString());
         
-        ArrayList <Student> listStudents = new ArrayList<>();
-        listStudents.add(new Student());
-        System.out.println("listStudents.toString:" + listStudents  .toString());
+        ArrayList <Student20> listStudent20s = new ArrayList<>();
+        listStudent20s.add(new Student20());
+        System.out.println("listStudent20s.toString:" + listStudent20s  .toString());
         
     }
 }

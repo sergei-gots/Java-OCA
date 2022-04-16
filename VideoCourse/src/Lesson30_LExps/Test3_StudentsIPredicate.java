@@ -6,43 +6,43 @@ import java.util.function.Predicate;
 public class Test3_StudentsIPredicate {
     
     public static void main(String[] args) {
-        ArrayList <Student> list = new ArrayList<>();
-        Student st1 = new Student("Ivan", 'm', 22, 3, 8.3);
-        Student st2 = new Student("Nikolay", 'm', 28, 2, 6.4);
-        Student st3 = new Student("Elena", 'f', 19, 1, 8.9);
-        Student st4 = new Student("Petr", 'm', 35, 4, 7);
-        Student st5 = new Student("Mariya", 'f', 23, 3, 9.1);
+        ArrayList <StudentPredicated> list = new ArrayList<>();
+        StudentPredicated st1 = new StudentPredicated("Ivan", 'm', 22, 3, 8.3);
+        StudentPredicated st2 = new StudentPredicated("Nikolay", 'm', 28, 2, 6.4);
+        StudentPredicated st3 = new StudentPredicated("Elena", 'f', 19, 1, 8.9);
+        StudentPredicated st4 = new StudentPredicated("Petr", 'm', 35, 4, 7);
+        StudentPredicated st5 = new StudentPredicated("Mariya", 'f', 23, 3, 9.1);
         list.add(st1);
         list.add(st2);
         list.add(st3);
         list.add(st4);
         list.add(st5);
-        StudentInfo si = new StudentInfo();
+        StudentPredicatedInfo si = new StudentPredicatedInfo();
         
-        for (Student s: list) {
+        for (StudentPredicated s: list) {
             System.out.println("s.name = " + s.name);
         }
         System.out.println("-------------------------------------");
         
         list.removeIf(x->x.name.endsWith("a"));
-        for (Student s: list) {
+        for (StudentPredicated s: list) {
             System.out.println("s.name = " + s.name);
         }
         System.out.println("-------------------------------------");
         
         
         
-        si.testStudents(list, (Student st) -> {return st.avGrade>8.5;} );
+        si.testStudentPredicateds(list, (StudentPredicated st) -> {return st.avGrade>8.5;} );
         System.out.println("----------------------------------------");
-        si.testStudents(list,   st -> st.avGrade < 9 );
+        si.testStudentPredicateds(list,   st -> st.avGrade < 9 );
         System.out.println("----------------------------------------");
-        si.testStudents(list, (Student st) -> st.age>27);
+        si.testStudentPredicateds(list, (StudentPredicated st) -> st.age>27);
         System.out.println("----------------------------------------");
-        si.testStudents(list, st -> {return st.age<25;} );
+        si.testStudentPredicateds(list, st -> {return st.age<25;} );
         System.out.println("----------------------------------------");
-        si.testStudents(list, (Student st) -> {return st.sex == 'm';} );
+        si.testStudentPredicateds(list, (StudentPredicated st) -> {return st.sex == 'm';} );
         System.out.println("----------------------------------------");
-        si.testStudents(list, (Student st) -> {
+        si.testStudentPredicateds(list, (StudentPredicated st) -> {
                                     return (st.avGrade > 7.2 
                                             && st.age < 23 
                                             && st.sex == 'f');
@@ -52,14 +52,14 @@ public class Test3_StudentsIPredicate {
     }
 }
     
-class Student {
+class StudentPredicated {
     String name;
     char sex;
     int age;
     int course;
     double avGrade;
     
-    Student(String name, char sex, int age, int course, double avGrade){
+    StudentPredicated(String name, char sex, int age, int course, double avGrade){
         this.name = name;
         this.sex = sex;
         this.age = age;
@@ -68,17 +68,17 @@ class Student {
     }
 }
 
-class StudentInfo{
-    void print(Student st){
-        System.out.println("Student " + st.name 
+class StudentPredicatedInfo{
+    void print(StudentPredicated st){
+        System.out.println("StudentPredicated " + st.name 
             + ", sex: " + st.sex
             + ", age: " + st.age
             + ", course: " + st.course
             + ", av.grade: " + st.avGrade);
     }
     
-    void testStudents(ArrayList <Student> aL, Predicate<Student> t){
-        for (Student st: aL){
+    void testStudentPredicateds(ArrayList <StudentPredicated> aL, Predicate<StudentPredicated> t){
+        for (StudentPredicated st: aL){
             if (t.test(st)){
                 print(st);
             }
